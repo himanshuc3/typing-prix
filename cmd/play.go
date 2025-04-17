@@ -1,10 +1,10 @@
 package cmd
 
 import (
-	"fmt"
 	"os"
 
 	"github.com/eiannone/keyboard"
+	"github.com/himanshuc3/typing-prix/internal/game"
 	"github.com/spf13/cobra"
 )
 
@@ -17,11 +17,11 @@ var playCmd = &cobra.Command{
 }
 
 func start() {
-	gameInstance := game.NewGame()
-	getKeyboardInput(runningGame)
+	gameInstance := game.New("Why am I attempting this project?")
+	getKeyboardInput(gameInstance)
 }
 
-func getKeyboardInput() {
+func getKeyboardInput(gameInstance *game.Game) {
 	if err := keyboard.Open(); err != nil {
 		panic(err)
 	}
@@ -30,24 +30,28 @@ func getKeyboardInput() {
 		keyboard.Close()
 	}()
 
-	fmt.Println("Press ESC to retire")
+	// fmt.Println("Press ESC to retire")
 
 	for {
-		character, key, err := keyboard.GetKey()
+		runeChar, key, err := keyboard.GetKey()
 		if err != nil {
 			panic(err)
 		}
+		defer func() {
+			_ = keyboard.Close()
+		}()
+
 		// NOTE:
 		// 1. Printing unicode representation and the key in laymen syntax
-		fmt.Printf("You pressed: rune %q, key %X\r\n", character, key)
-		if key == keyboard.KeyEsc {
+		// fmt.Printf("You pressed: rune %q, key %X\r\n", runeChar, key)
+		if key == keyboard.KeyEsc || key == keyboard.KeyCtrlC {
 			break
 		}
 
-		isFinished := game.Stop()
+		isFinished := gameInstance.Input(runeChar)
 
 		if isFinished {
-			game.Stop()
+			gameInstance.Stop()
 			os.Exit(0)
 			break
 		}

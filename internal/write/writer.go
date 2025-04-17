@@ -1,4 +1,4 @@
-package cmd
+package write
 
 import (
 	"fmt"
@@ -15,7 +15,7 @@ type LiveRenderer struct {
 // 1. Variables declared globally are accessible on a package level
 // rather than only to the file
 // 2. uilive - Extraction over os.Stdout writer for flushing and synchronized writes
-var writer = New()
+var Writer = New()
 
 func New() *LiveRenderer {
 	return &LiveRenderer{
@@ -26,16 +26,16 @@ func New() *LiveRenderer {
 
 func (renderer *LiveRenderer) Print(text string) {
 	if renderer.initiated {
-		fmt.Fprintf(renderer.writer, text)
+		fmt.Fprintf(renderer.writer, text+"\n")
 		return
 	}
 	renderer.writer.Start()
 	renderer.initiated = true
-	fmt.Fprintf(renderer.writer, text)
+	fmt.Fprintf(renderer.writer, text+"\n")
 }
 
 func (renderer *LiveRenderer) Stop() {
-	writer.Stop()
+	renderer.writer.Stop()
 }
 
 func clear() {
