@@ -6,20 +6,36 @@ import (
 	"github.com/gosuri/uilive"
 )
 
-var writer = uilive.New()
-
-func Print(text string) {
-	writer.Start()
-	clear()
-	fmt.Fprintln(writer, text)
+type LiveRenderer struct {
+	writer    *uilive.Writer
+	initiated bool
 }
 
-func Stop() {
+// NOTE:
+// 1. Variables declared globally are accessible on a package level
+// rather than only to the file
+// 2. uilive - Extraction over os.Stdout writer for flushing and synchronized writes
+var writer = New()
+
+func New() *LiveRenderer {
+	return &LiveRenderer{
+		writer:    uilive.New(),
+		initiated: false,
+	}
+}
+
+func (renderer *LiveRenderer) Print(text string) {
+	if renderer.initiated {
+		fmt.Fprintf(renderer.writer, text)
+		return
+	}
+	renderer.writer.Start()
+	renderer.initiated = true
+	fmt.Fprintf(renderer.writer, text)
+}
+
+func (renderer *LiveRenderer) Stop() {
 	writer.Stop()
-}
-
-func Update(text string) {
-	fmt.Fprintln(writer, text)
 }
 
 func clear() {
