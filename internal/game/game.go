@@ -1,8 +1,6 @@
 package game
 
 import (
-	"fmt"
-
 	"github.com/TwiN/go-color"
 	"github.com/eiannone/keyboard"
 	"github.com/himanshuc3/typing-prix/internal/write"
@@ -56,11 +54,11 @@ func (g *Game) getWPM() int {
 }
 
 func (g *Game) Input(letter rune) bool {
-	fmt.Printf("%b", letter == rune(keyboard.KeySpace))
 	if letter == rune(keyboard.KeyBackspace2) {
 		g.currentIndex = max(g.currentIndex-1, 0)
-	} else if letter != rune(keyboard.KeySpace) && g.inputTextSlice[g.currentIndex] == ' ' {
+	} else if letter != 0 && g.inputTextSlice[g.currentIndex] == ' ' {
 		// Don't do anything
+		// fmt.Print("no match space")
 		return false
 	} else {
 		g.currentIndex++

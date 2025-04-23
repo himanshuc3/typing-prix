@@ -1,0 +1,46 @@
+Date : 2025-04-18 02:18:23
+Directory : /home/anonymous/Desktop/projects/typing-prix
+Total : 12 files,  259 codes, 47 comments, 78 blanks, all 384 lines
+
+Languages
++------------------+------------+------------+------------+------------+------------+
+| language         | files      | code       | comment    | blank      | total      |
++------------------+------------+------------+------------+------------+------------+
+| Go               |          8 |        209 |         47 |         64 |        320 |
+| Go Checksum File |          1 |         20 |          0 |          1 |         21 |
+| Markdown         |          2 |         18 |          0 |         10 |         28 |
+| Go Module File   |          1 |         12 |          0 |          3 |         15 |
++------------------+------------+------------+------------+------------+------------+
+
+Directories
++--------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                     | files      | code       | comment    | blank      | total      |
++--------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                        |         12 |        259 |         47 |         78 |        384 |
+| . (Files)                                                                |          5 |         55 |          3 |         17 |         75 |
+| cmd                                                                      |          2 |         66 |         19 |         21 |        106 |
+| internal                                                                 |          5 |        138 |         25 |         40 |        203 |
+| internal/game                                                            |          2 |         95 |         18 |         27 |        140 |
+| internal/helper                                                          |          1 |          7 |          0 |          2 |          9 |
+| internal/utils                                                           |          1 |          5 |          0 |          2 |          7 |
+| internal/write                                                           |          1 |         31 |          7 |          9 |         47 |
++--------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++--------------------------------------------------------------------------+------------------+------------+------------+------------+------------+
+| filename                                                                 | language         | code       | comment    | blank      | total      |
++--------------------------------------------------------------------------+------------------+------------+------------+------------+------------+
+| /home/anonymous/Desktop/projects/typing-prix/TODO.md                     | Markdown         |         13 |          0 |          9 |         22 |
+| /home/anonymous/Desktop/projects/typing-prix/challenges.md               | Markdown         |          5 |          0 |          1 |          6 |
+| /home/anonymous/Desktop/projects/typing-prix/cmd/play.go                 | Go               |         44 |          4 |         13 |         61 |
+| /home/anonymous/Desktop/projects/typing-prix/cmd/root.go                 | Go               |         22 |         15 |          8 |         45 |
+| /home/anonymous/Desktop/projects/typing-prix/go.mod                      | Go Module File   |         12 |          0 |          3 |         15 |
+| /home/anonymous/Desktop/projects/typing-prix/go.sum                      | Go Checksum File |         20 |          0 |          1 |         21 |
+| /home/anonymous/Desktop/projects/typing-prix/internal/game/game.go       | Go               |         89 |         18 |         25 |        132 |
+| /home/anonymous/Desktop/projects/typing-prix/internal/game/helper.go     | Go               |          6 |          0 |          2 |          8 |
+| /home/anonymous/Desktop/projects/typing-prix/internal/helper/helper.go   | Go               |          7 |          0 |          2 |          9 |
+| /home/anonymous/Desktop/projects/typing-prix/internal/utils/constants.go | Go               |          5 |          0 |          2 |          7 |
+| /home/anonymous/Desktop/projects/typing-prix/internal/write/writer.go    | Go               |         31 |          7 |          9 |         47 |
+| /home/anonymous/Desktop/projects/typing-prix/main.go                     | Go               |          5 |          3 |          3 |         11 |
+| Total                                                                    |                  |        259 |         47 |         78 |        384 |
++--------------------------------------------------------------------------+------------------+------------+------------+------------+------------+

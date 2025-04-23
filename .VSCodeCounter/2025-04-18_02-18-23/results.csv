@@ -1,0 +1,14 @@
+"filename", "language", "Markdown", "Go", "Go Checksum File", "Go Module File", "comment", "blank", "total"
+"/home/anonymous/Desktop/projects/typing-prix/TODO.md", "Markdown", 13, 0, 0, 0, 0, 9, 22
+"/home/anonymous/Desktop/projects/typing-prix/challenges.md", "Markdown", 5, 0, 0, 0, 0, 1, 6
+"/home/anonymous/Desktop/projects/typing-prix/cmd/play.go", "Go", 0, 44, 0, 0, 4, 13, 61
+"/home/anonymous/Desktop/projects/typing-prix/cmd/root.go", "Go", 0, 22, 0, 0, 15, 8, 45
+"/home/anonymous/Desktop/projects/typing-prix/go.mod", "Go Module File", 0, 0, 0, 12, 0, 3, 15
+"/home/anonymous/Desktop/projects/typing-prix/go.sum", "Go Checksum File", 0, 0, 20, 0, 0, 1, 21
+"/home/anonymous/Desktop/projects/typing-prix/internal/game/game.go", "Go", 0, 89, 0, 0, 18, 25, 132
+"/home/anonymous/Desktop/projects/typing-prix/internal/game/helper.go", "Go", 0, 6, 0, 0, 0, 2, 8
+"/home/anonymous/Desktop/projects/typing-prix/internal/helper/helper.go", "Go", 0, 7, 0, 0, 0, 2, 9
+"/home/anonymous/Desktop/projects/typing-prix/internal/utils/constants.go", "Go", 0, 5, 0, 0, 0, 2, 7
+"/home/anonymous/Desktop/projects/typing-prix/internal/write/writer.go", "Go", 0, 31, 0, 0, 7, 9, 47
+"/home/anonymous/Desktop/projects/typing-prix/main.go", "Go", 0, 5, 0, 0, 3, 3, 11
+"Total", "-", 18, 209, 20, 12, 47, 78, 384
